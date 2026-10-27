@@ -1,0 +1,123 @@
+/* Summa rekstrarfélag hf. – sameiginlegt útlit fyrir summa.is
+   Einn dálkur fyrir texta, myndræn forsíða með fjallamynd, svarthvít ásýnd í anda merkisins. */
+
+@font-face { font-family: "Jost"; font-weight: 300; font-style: normal; font-display: swap; src: url("../fonts/jost-latin-300-normal.woff2") format("woff2"); }
+@font-face { font-family: "Jost"; font-weight: 400; font-style: normal; font-display: swap; src: url("../fonts/jost-latin-400-normal.woff2") format("woff2"); }
+@font-face { font-family: "Jost"; font-weight: 500; font-style: normal; font-display: swap; src: url("../fonts/jost-latin-500-normal.woff2") format("woff2"); }
+
+:root {
+  --ink: #141617;
+  --ink-soft: #4a5054;
+  --line: #dfe2e3;
+  --paper: #ffffff;
+  --paper-alt: #f2f4f4;
+  --accent: #1f4b5c;
+  --draft-bg: #fff3cd;
+  --draft-ink: #6b4e00;
+  --font: "Jost", "Futura", "Century Gothic", "Avenir Next", system-ui, sans-serif;
+  --measure: 68ch;
+  --wide: 1120px;
+  color-scheme: light;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 300 1.0625rem/1.65 var(--font);
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--accent); text-underline-offset: 0.18em; }
+a:hover { color: var(--ink); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+.inner {
+  max-width: var(--wide);
+  margin: 0 auto;
+  padding-left: max(20px, env(safe-area-inset-left, 0px));
+  padding-right: max(20px, env(safe-area-inset-right, 0px));
+}
+
+.skip { position: absolute; left: -9999px; }
+.skip:focus { left: 12px; top: 12px; background: var(--paper); padding: 8px 12px; z-index: 10; }
+
+/* Haus */
+.site-header { border-bottom: 1px solid var(--line); background: var(--paper); }
+.site-header .inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 32px; padding-block: 18px; }
+.site-header .logo img { width: 190px; }
+.site-nav ul { display: flex; flex-wrap: wrap; gap: 6px 26px; list-style: none; margin: 0; padding: 0; }
+.site-nav a { color: var(--ink); text-decoration: none; font-weight: 400; font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase; padding-block: 4px; border-bottom: 1px solid transparent; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { border-bottom-color: var(--ink); }
+.site-nav .lang a { color: var(--ink-soft); }
+
+/* Forsíða */
+.hero {
+  position: relative;
+  color: #fff;
+  background: #1a1c1d url("../img/fjoll.webp") center 40% / cover no-repeat;
+}
+.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(100deg, rgba(10,12,13,0.82) 0%, rgba(10,12,13,0.55) 55%, rgba(10,12,13,0.25) 100%); }
+.hero .inner { position: relative; padding-block: clamp(64px, 12vw, 140px); display: grid; gap: 22px; }
+.hero .mark { width: 120px; }
+.hero h1 { font-weight: 300; font-size: clamp(1.9rem, 4.2vw, 3rem); line-height: 1.15; margin: 0; max-width: 22ch; text-wrap: balance; }
+.hero p { margin: 0; max-width: 52ch; font-size: 1.15rem; color: rgba(255,255,255,0.88); }
+
+.paths { background: var(--paper-alt); }
+.paths .inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; padding-block: 0; background: var(--line); border-inline: 1px solid var(--line); }
+.paths a { background: var(--paper-alt); padding: 32px 28px; text-decoration: none; color: var(--ink); display: grid; gap: 6px; }
+.paths a:hover { background: var(--paper); }
+.paths .label { font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; }
+.paths .desc { color: var(--ink-soft); }
+
+/* Innsíður */
+main { display: block; }
+.page-head { border-bottom: 1px solid var(--line); }
+.page-head .inner { padding-block: 56px 36px; }
+.page-head h1 { margin: 0; font-weight: 300; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.15; letter-spacing: 0.01em; }
+.content .inner { padding-block: 40px 72px; display: grid; gap: 48px; }
+.prose { max-width: var(--measure); display: grid; gap: 1rem; }
+.prose p, .prose ul { margin: 0; }
+.prose ul { padding-left: 1.2em; display: grid; gap: 0.3rem; }
+h2 { font-weight: 400; font-size: 1.5rem; line-height: 1.25; margin: 0; letter-spacing: 0.01em; }
+h3 { font-weight: 500; font-size: 1.1rem; margin: 0; }
+section.block { display: grid; gap: 1rem; border-top: 1px solid var(--line); padding-top: 32px; }
+section.block:first-child { border-top: 0; padding-top: 0; }
+.note { font-size: 0.95rem; color: var(--ink-soft); border-left: 2px solid var(--line); padding-left: 14px; }
+
+/* Starfsfólk */
+.people { display: grid; gap: 40px; }
+.person { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 28px; align-items: start; }
+.person img { width: 180px; aspect-ratio: 3 / 4; object-fit: cover; background: var(--paper-alt); filter: grayscale(1); }
+.person .text { display: grid; gap: 0.6rem; max-width: var(--measure); }
+.person .role { color: var(--ink-soft); font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.85rem; margin: -0.3rem 0 0; }
+.person p { margin: 0; }
+.contact { display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 0.95rem; }
+.board { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+.board article { display: grid; gap: 0.5rem; align-content: start; }
+.board p { margin: 0; }
+
+/* Skjöl */
+.docs { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); max-width: var(--measure); }
+.docs li { border-bottom: 1px solid var(--line); }
+.docs a { display: flex; justify-content: space-between; gap: 16px; padding: 14px 2px; text-decoration: none; color: var(--ink); }
+.docs a:hover { color: var(--accent); }
+.docs .meta { color: var(--ink-soft); font-size: 0.85rem; white-space: nowrap; letter-spacing: 0.05em; }
+
+/* Drög sem bíða staðfestingar – fjarlægja fyrir opnun */
+.draft { background: var(--draft-bg); color: var(--draft-ink); font-size: 0.9rem; padding: 2px 8px; border-radius: 3px; font-weight: 400; }
+.draft-banner { background: var(--draft-bg); color: var(--draft-ink); font-size: 0.9rem; text-align: center; padding: 8px 16px; }
+
+/* Fótur */
+.site-footer { background: var(--ink); color: #c9cdcf; font-size: 0.92rem; }
+.site-footer .inner { padding-block: 32px; display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: space-between; }
+.site-footer a { color: #fff; }
+.site-footer p { margin: 0; }
+
+@media (max-width: 640px) {
+  .person { grid-template-columns: 1fr; gap: 16px; }
+  .person img { width: 160px; }
+  .site-header .logo img { width: 160px; }
+  .site-nav ul { gap: 4px 18px; }
+}
