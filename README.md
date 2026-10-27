@@ -10,7 +10,7 @@ Heimasíða Summu rekstrarfélags hf. Kyrrstæð HTML-síða hýst með GitHub P
 | `um-summu/`, `radgjof/`, `sjodir/`, `skilmalar/` | Íslenskar síður |
 | `en/`, `en/about/`, `en/services/`, `en/investment-funds/`, `en/licenses/` | Enskar síður |
 | `upplysingar/`, `en/heim-english/` | Framvísanir frá gömlum slóðum |
-| `wp-content/uploads/…` | Stefnuskjöl (PDF), á sömu slóðum og á gamla WordPress-vefnum svo eldri tenglar virki |
+| `skjol/` | Stefnuskjöl (PDF) með föstum heitum, t.d. `skjol/personuverndarstefna.pdf`. Ný útgáfa: skipta skránni út undir sama heiti, svo tenglar haldist |
 | `assets/` | Útlit (CSS), letur, myndir |
 
 ## Breytingar
@@ -26,6 +26,6 @@ Jost (SIL Open Font License 1.1, sjá `assets/fonts/OFL-Jost.txt`). Futura er ek
 ## Áður en síðan fer á summa.is
 
 - [ ] Fjarlægja `noindex`, forskoðunarborða og `robots.txt`-bann (stillt í smíðaskriftunni sem `PREVIEW`).
-- [x] PDF-skjöl í `wp-content/uploads/` (sömu skrár og á gamla vefnum, júní 2024).
+- [x] PDF-skjöl í `skjol/` (sömu útgáfur og á gamla vefnum, júní 2024 – staðfesta að þær séu gildandi).
 - [ ] Mynd af Ólöfu, ferilstexti Önnu, yfirlestur á enskri þýðingu um Ægi, forsíðutexti.
 - [ ] Bæta við `CNAME` (summa.is) og breyta DNS.
