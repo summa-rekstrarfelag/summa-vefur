@@ -80,7 +80,7 @@ main { display: block; }
 .page-head .inner, .content .inner { max-width: calc(var(--wide) - 40px); background: var(--paper); padding-left: clamp(20px, 5vw, 56px); padding-right: clamp(20px, 5vw, 56px); }
 .page-head .inner { padding-block: 56px 8px; }
 .page-head h1 { margin: 0; color: var(--orange); font-weight: 400; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.15; letter-spacing: 0.01em; }
-.content { padding-bottom: 64px; }
+.content { padding-bottom: 32px; }
 .content .inner { padding-top: 40px; padding-bottom: 72px; display: grid; gap: 48px; }
 .prose { max-width: var(--measure); display: grid; gap: 1rem; }
 .prose p, .prose ul { margin: 0; }
@@ -116,10 +116,10 @@ section.block { display: grid; gap: 1rem; align-content: start; }
 .draft { background: var(--draft-bg); color: var(--draft-ink); font-size: 0.9rem; padding: 2px 8px; border-radius: 3px; font-weight: 400; }
 .draft-banner { background: var(--draft-bg); color: var(--draft-ink); font-size: 0.9rem; text-align: center; padding: 8px 16px; }
 
-/* Fótur */
-.site-footer { background: var(--ink); color: #c9cdcf; font-size: 0.92rem; }
-.site-footer .inner { padding-block: 32px; display: flex; flex-wrap: wrap; gap: 8px 28px; justify-content: space-between; }
-.site-footer a { color: #fff; }
+/* Fótur – á gráa grunninum, eins og á gamla vefnum */
+.site-footer { background: var(--ground); color: var(--ink); font-size: 0.92rem; }
+.site-footer .inner { padding-block: 8px 40px; display: flex; flex-wrap: wrap; gap: 6px 28px; justify-content: center; text-align: center; }
+.site-footer a { color: var(--ink); }
 .site-footer p { margin: 0; }
 
 /* Starfsfólk fer í einn dálk áður en textinn verður hærri en myndin */
