@@ -136,3 +136,6 @@ section.block { display: grid; gap: 1rem; align-content: start; }
   .site-header .logo img { width: 160px; }
   .site-nav ul { gap: 4px 18px; }
 }
+
+/* Bil milli forsíðumyndar og fótar */
+main:has(.hero) + .site-footer .inner { padding-top: 32px; }
