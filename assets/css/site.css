@@ -11,7 +11,10 @@
   --line: #dfe2e3;
   --paper: #ffffff;
   --paper-alt: #f2f4f4;
-  --accent: #1f4b5c;
+  --ground: #c3cbcd;   /* grár bakgrunnur eins og á gamla vefnum */
+  --accent: #a84400;   /* tenglar */
+  --orange: #f35308;   /* fyrirsagnir síðna, eins og á gamla vefnum */
+  --orange-text: #c44700; /* appelsínugult í smáu letri, nægur birtuskil */
   --draft-bg: #fff3cd;
   --draft-ink: #6b4e00;
   --font: "Jost", "Futura", "Century Gothic", "Avenir Next", system-ui, sans-serif;
@@ -24,7 +27,7 @@
 html { -webkit-text-size-adjust: 100%; }
 body {
   margin: 0;
-  background: var(--paper);
+  background: var(--ground);
   color: var(--ink);
   font: 300 1.0625rem/1.65 var(--font);
 }
@@ -44,12 +47,13 @@ a:hover { color: var(--ink); }
 .skip:focus { left: 12px; top: 12px; background: var(--paper); padding: 8px 12px; z-index: 10; }
 
 /* Haus */
-.site-header { border-bottom: 1px solid var(--line); background: var(--paper); }
-.site-header .inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 32px; padding-block: 18px; }
+.site-header { background: var(--ground); }
+.site-header .inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 32px; padding-block: 28px; }
 .site-header .logo img { width: 190px; }
 .site-nav ul { display: flex; flex-wrap: wrap; gap: 6px 26px; list-style: none; margin: 0; padding: 0; }
 .site-nav a { color: var(--ink); text-decoration: none; font-weight: 400; font-size: 0.95rem; letter-spacing: 0.06em; text-transform: uppercase; padding-block: 4px; border-bottom: 1px solid transparent; }
-.site-nav a:hover, .site-nav a[aria-current="page"] { border-bottom-color: var(--ink); }
+.site-nav a:hover { border-bottom-color: var(--ink); }
+.site-nav a[aria-current="page"] { color: var(--orange-text); }
 .site-nav .lang a { color: var(--ink-soft); }
 
 /* Forsíða */
@@ -64,19 +68,20 @@ a:hover { color: var(--ink); }
 .hero h1 { font-weight: 300; font-size: clamp(1.9rem, 4.2vw, 3rem); line-height: 1.15; margin: 0; max-width: 22ch; text-wrap: balance; }
 .hero p { margin: 0; max-width: 52ch; font-size: 1.15rem; color: rgba(255,255,255,0.88); }
 
-.paths { background: var(--paper-alt); }
-.paths .inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1px; padding-block: 0; background: var(--line); border-inline: 1px solid var(--line); }
-.paths a { background: var(--paper-alt); padding: 32px 28px; text-decoration: none; color: var(--ink); display: grid; gap: 6px; }
-.paths a:hover { background: var(--paper); }
+.paths .inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; padding-block: 32px 56px; }
+.paths a { background: var(--paper); padding: 32px 28px; text-decoration: none; color: var(--ink); display: grid; gap: 6px; }
+.paths a:hover { box-shadow: inset 0 -3px 0 var(--orange); }
 .paths .label { font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; font-size: 0.85rem; }
 .paths .desc { color: var(--ink-soft); }
 
 /* Innsíður */
 main { display: block; }
-.page-head { border-bottom: 1px solid var(--line); }
-.page-head .inner { padding-block: 56px 36px; }
-.page-head h1 { margin: 0; font-weight: 300; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.15; letter-spacing: 0.01em; }
-.content .inner { padding-block: 40px 72px; display: grid; gap: 48px; }
+/* Hvítur efnisreitur á gráum grunni */
+.page-head .inner, .content .inner { max-width: calc(var(--wide) - 40px); background: var(--paper); padding-left: clamp(20px, 5vw, 56px); padding-right: clamp(20px, 5vw, 56px); }
+.page-head .inner { padding-block: 56px 8px; }
+.page-head h1 { margin: 0; color: var(--orange); font-weight: 400; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.15; letter-spacing: 0.01em; }
+.content { padding-bottom: 64px; }
+.content .inner { padding-top: 40px; padding-bottom: 72px; display: grid; gap: 48px; }
 .prose { max-width: var(--measure); display: grid; gap: 1rem; }
 .prose p, .prose ul { margin: 0; }
 .prose ul { padding-left: 1.2em; display: grid; gap: 0.3rem; }
@@ -88,8 +93,8 @@ section.block:first-child { border-top: 0; padding-top: 0; }
 
 /* Starfsfólk */
 .people { display: grid; gap: 40px; }
-.person { display: grid; grid-template-columns: 180px minmax(0, 1fr); gap: 28px; align-items: start; }
-.person img { width: 180px; aspect-ratio: 3 / 4; object-fit: cover; background: var(--paper-alt); filter: grayscale(1); }
+.person { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 36px; align-items: start; }
+.person img { width: 280px; aspect-ratio: 3 / 4; object-fit: cover; background: var(--paper-alt); filter: grayscale(1); }
 .person .text { display: grid; gap: 0.6rem; max-width: var(--measure); }
 .person .role { color: var(--ink-soft); font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.85rem; margin: -0.3rem 0 0; }
 .person p { margin: 0; }
@@ -115,9 +120,12 @@ section.block:first-child { border-top: 0; padding-top: 0; }
 .site-footer a { color: #fff; }
 .site-footer p { margin: 0; }
 
-@media (max-width: 640px) {
+/* Starfsfólk fer í einn dálk áður en textinn verður hærri en myndin */
+@media (max-width: 860px) {
   .person { grid-template-columns: 1fr; gap: 16px; }
-  .person img { width: 160px; }
+  .person img { width: 100%; max-width: 320px; }
+}
+@media (max-width: 640px) {
   .site-header .logo img { width: 160px; }
   .site-nav ul { gap: 4px 18px; }
 }
