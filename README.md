@@ -26,6 +26,6 @@ Jost (SIL Open Font License 1.1, sjá `assets/fonts/OFL-Jost.txt`). Futura er ek
 ## Áður en síðan fer á summa.is
 
 - [ ] Fjarlægja `noindex`, forskoðunarborða og `robots.txt`-bann (stillt í smíðaskriftunni sem `PREVIEW`).
-- [ ] Setja inn PDF-skjöl í `wp-content/uploads/`.
+- [x] PDF-skjöl í `wp-content/uploads/` (sömu skrár og á gamla vefnum, júní 2024).
 - [ ] Mynd af Ólöfu, ferilstexti Önnu, yfirlestur á enskri þýðingu um Ægi, forsíðutexti.
 - [ ] Bæta við `CNAME` (summa.is) og breyta DNS.
