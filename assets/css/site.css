@@ -77,12 +77,17 @@ a:hover { color: var(--ink); }
 /* Innsíður */
 main { display: block; }
 /* Hvítur efnisreitur á gráum grunni */
-.page-head .inner, .content .inner { max-width: calc(var(--wide) - 40px); background: var(--paper); padding-left: clamp(20px, 5vw, 56px); padding-right: clamp(20px, 5vw, 56px); }
+.page-head .inner, .content .inner { --pad: clamp(20px, 5vw, 56px); max-width: calc(var(--wide) - 40px); background: var(--paper); padding-left: var(--pad); padding-right: var(--pad); }
 .page-head .inner { padding-block: 56px 8px; }
 .page-head h1 { margin: 0; color: var(--orange); font-weight: 400; font-size: clamp(2rem, 4vw, 2.75rem); line-height: 1.15; letter-spacing: 0.01em; }
 .content { padding-bottom: 32px; }
 .content .inner { padding-top: 40px; padding-bottom: 72px; display: grid; gap: 48px; }
 .prose { max-width: var(--measure); display: grid; gap: 1rem; }
+.prose.wide { max-width: none; }
+/* Mynd neðst í hvíta reitnum, nær út í brúnir */
+.content.has-image .inner { padding-bottom: 0; }
+.panel-image { margin: 0 calc(-1 * var(--pad)); }
+.panel-image img { width: 100%; height: clamp(180px, 32vw, 420px); object-fit: cover; object-position: center 60%; }
 .prose p, .prose ul { margin: 0; }
 .prose ul { padding-left: 1.2em; display: grid; gap: 0.3rem; }
 h2 { font-weight: 400; font-size: 1.5rem; line-height: 1.25; margin: 0; letter-spacing: 0.01em; }
