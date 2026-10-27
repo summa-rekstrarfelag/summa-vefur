@@ -106,7 +106,7 @@ section.block { display: grid; gap: 1rem; align-content: start; }
 .person .role { color: var(--ink-soft); font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.85rem; margin: -0.3rem 0 0; }
 .person p { margin: 0; }
 .contact { display: flex; flex-wrap: wrap; gap: 4px 22px; font-size: 0.95rem; }
-.board { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 32px; }
+.board { display: grid; grid-template-columns: 1fr; gap: 40px; }
 .board article { display: grid; gap: 0.5rem; align-content: start; }
 .board p { margin: 0; }
 
@@ -139,3 +139,6 @@ section.block { display: grid; gap: 1rem; align-content: start; }
 
 /* Bil milli forsíðumyndar og fótar */
 main:has(.hero) + .site-footer .inner { padding-top: 32px; }
+
+/* Kaflafyrirsagnir á Um Summu, appelsínugular eins og á gamla vefnum */
+h2.section-title { color: var(--orange); }
