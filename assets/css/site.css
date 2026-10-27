@@ -121,7 +121,7 @@ section.block:first-child { border-top: 0; padding-top: 0; }
 .site-footer p { margin: 0; }
 
 /* Starfsfólk fer í einn dálk áður en textinn verður hærri en myndin */
-@media (max-width: 860px) {
+@media (max-width: 1040px) {
   .person { grid-template-columns: 1fr; gap: 16px; }
   .person img { width: 100%; max-width: 320px; }
 }
