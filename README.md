@@ -15,6 +15,8 @@ Heimasíða Summu rekstrarfélags hf. Kyrrstæð HTML-síða hýst með GitHub P
 
 ## Breytingar
 
+- **HTML-skrárnar eru frumgögnin.** Fyrsta útgáfan var smíðuð með skriftu sem er ekki í geymslunni. Héðan í frá er breytt beint í HTML-skránum. Haus, valmynd og fótur eru endurtekin í hverri skrá, svo breyting á þeim fer í allar síður.
+- Allt sem fer á grein `main` birtist á summa.is innan fárra mínútna. Yfirfara breytingar áður en þær eru vistaðar.
 - Allur texti er beint í HTML-skránum. Lítil textabreyting: opna skrána á github.com → blýantur (Edit) → *Commit changes*. Síðan uppfærist sjálfkrafa eftir 1–2 mínútur.
 - Íslensk og ensk útgáfa eru aðskildar skrár. Muna að breyta báðum.
 - Starfsmannamyndir: `assets/img/starfsfolk/`, 600×800 px, svarthvítar.
