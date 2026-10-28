@@ -100,8 +100,8 @@ section.block { display: grid; gap: 1rem; align-content: start; }
 
 /* Starfsfólk */
 .people { display: grid; gap: 40px; }
-.person { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 36px; align-items: start; }
-.person img { width: 280px; aspect-ratio: 3 / 4; object-fit: cover; background: var(--paper-alt); filter: grayscale(1); }
+.person { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 36px; align-items: start; }
+.person img { width: 300px; aspect-ratio: 3 / 4; object-fit: cover; background: var(--paper-alt); filter: grayscale(1); }
 .person .text { display: grid; gap: 0.6rem; max-width: var(--measure); }
 .person .role { color: var(--ink-soft); font-weight: 400; letter-spacing: 0.04em; text-transform: uppercase; font-size: 0.85rem; margin: -0.3rem 0 0; }
 .person p { margin: 0; }
