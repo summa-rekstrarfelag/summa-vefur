@@ -23,9 +23,14 @@ Heimasíða Summu rekstrarfélags hf. Kyrrstæð HTML-síða hýst með GitHub P
 
 Jost (SIL Open Font License 1.1, sjá `assets/fonts/OFL-Jost.txt`). Futura er ekki notuð þar sem ekkert vefleyfi liggur fyrir.
 
+## Hýsing
+
+Örugg afritun ehf. hýsir síðuna á summa.is. Vefþjónninn sækir nýjustu útgáfuna sjálfkrafa úr þessari geymslu (grein `main`), svo breytingar sem gerðar eru hér birtast á summa.is án aðkomu hýsingaraðila. DNS fyrir summa.is er hjá 1984 og vísar á vefþjón Öruggrar afritunar.
+
 ## Áður en síðan fer á summa.is
 
-- [ ] Fjarlægja `noindex`, forskoðunarborða og `robots.txt`-bann (stillt í smíðaskriftunni sem `PREVIEW`).
 - [x] PDF-skjöl í `skjol/` (sömu útgáfur og á gamla vefnum, júní 2024 – staðfesta að þær séu gildandi).
-- [ ] Mynd af Ólöfu, ferilstexti Önnu, yfirlestur á enskri þýðingu um Ægi, forsíðutexti.
-- [ ] Bæta við `CNAME` (summa.is) og breyta DNS.
+- [x] Starfsmannatextar og myndir, forsíðutexti.
+- [ ] Fjarlægja `noindex`, forskoðunarborða og `robots.txt`-bann (gert rétt fyrir opnun).
+- [ ] Örugg afritun tengir vefþjóninn við geymsluna og lokar WordPress.
+- [ ] Slökkva á GitHub Pages-forskoðun eftir opnun (*Settings → Pages*).
