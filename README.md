@@ -31,6 +31,6 @@ Jost (SIL Open Font License 1.1, sjá `assets/fonts/OFL-Jost.txt`). Futura er ek
 
 - [x] PDF-skjöl í `skjol/` (sömu útgáfur og á gamla vefnum, júní 2024 – staðfesta að þær séu gildandi).
 - [x] Starfsmannatextar og myndir, forsíðutexti.
-- [ ] Fjarlægja `noindex`, forskoðunarborða og `robots.txt`-bann (gert rétt fyrir opnun).
+- [x] Forskoðunarstilling fjarlægð. Allar síður vísa á summa.is sem rétta slóð (canonical).
 - [ ] Örugg afritun tengir vefþjóninn við geymsluna og lokar WordPress.
 - [ ] Slökkva á GitHub Pages-forskoðun eftir opnun (*Settings → Pages*).
